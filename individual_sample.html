@@ -9,6 +9,7 @@
     <title>Where Go Eat</title>
 </head>
 <body>
+<!--Navigation bar for the website-->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
         <a href="#" class="navbar-brand">
@@ -19,9 +20,11 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav">
+                <!--                Have a list of available pages here via href links-->
                 <a href="./search.html" class="nav-item nav-link">Search</a>
                 <a href="submission.html" class="nav-item nav-link">Submit</a>
                 <a href="results_sample.html" class="nav-item nav-link">Sample Results</a>
+                <!--                The active class in bootstrap indicates the active link being clicked on by highlighting it-->
                 <a href="individual_sample.html" class="nav-item nav-link active">Individual Sample Result</a>
             </div>
             <div class="navbar-nav ms-auto">
@@ -32,58 +35,99 @@
     </div>
 </nav>
 
-
+<!--Main body of the html-->
 <div class="p-5 mb-4 rounded-3">
     <div class="container">
-        <!-- Product section-->
         <section class="py-5">
             <div class="container px-4 px-lg-5 my-5">
                 <div class="row gx-4 gx-lg-5 align-items-center">
-                    <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0"
-                                               src="https://dummyimage.com/600x700/dee2e6/6c757d.jpg" alt="..."/></div>
+                    <div class="col-md-6"><img class="card-img-top"
+                                               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8yMIHkxs901EzRfpvMq6gIEfDADZcfbJxLw&usqp=CAU"
+                                               alt="..."/></div>
                     <div class="col-md-6">
-                        <div class="small mb-1">SKU: BST-498</div>
-                        <h1 class="display-5 fw-bolder">Shop item template</h1>
+                        <h1 class="display-5 fw-bolder">The Island Grill</h1>
+                        <!--                        Display the aggregate rating for the restaurant here-->
                         <div class="fs-5 mb-5">
-                            <span class="text-decoration-line-through">$45.00</span>
-                            <div class="p-2 px-3 mx-2">
-                                <p class="sm-text mb-0">OVERALL RATING</p>
-                                <h4>4.8</h4>
+                            <span>Overall Rating: 4.8</span>
+                        </div>
+                        <!--                        Mission statement / description of the restaurant-->
+                        <p class="lead">At Island Grill, our mission is simple: enhance and educate the palate with the
+                            freshest ingredients and flavors, while surprising and exciting each guest with personal
+                            care and service.</p>
+                        <!--                        A form for users to submit the review using bootstrap forms-->
+                        <form>
+                            <div class="mb-3">
+                                <textarea class="form-control" placeholder="Write your review here"
+                                          id="floatingTextarea"></textarea>
                             </div>
-                            <span>$40.00</span>
-                        </div>
-                        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium at dolorem
-                            quidem modi. Nam sequi consequatur obcaecati excepturi alias magni, accusamus eius
-                            blanditiis delectus ipsam minima ea iste laborum vero?</p>
-                        <div class="d-flex">
-                            <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1"
-                                   style="max-width: 3rem"/>
-                            <button class="btn btn-outline-dark flex-shrink-0" type="button">
-                                <i class="bi-cart-fill me-1"></i>
-                                Add to cart
-                            </button>
-                        </div>
+                            <div class="mb-3">
+                                <label class="form-label">Rating</label>
+                                <!--                                For now the rating is from 1-5 using a select input-->
+                                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                                    <option value="5" selected>5 stars</option>
+                                    <option value="4">4 stars</option>
+                                    <option value="3">3 stars</option>
+                                    <option value="2">2 stars</option>
+                                    <option value="1">1 star</option>
+                                </select>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Submit Review</button>
+                        </form>
                     </div>
+                </div>
+                <!--                Display the map here, for now use a placeholder-->
+                <div class="row my-5">
+                    <img src="https://lh6.ggpht.com/tIJO-z4W_09faOPdfFkD0qHfeo5l2SU-F7Y7LjAUd97mPgy-mJg8lEs3YtfMvlXKuMA=h900"
+                         class="img-fluid">
                 </div>
             </div>
         </section>
 
-        <div class="review p-5">
+        <!--        A list of comments/ reviews for the current restaurant-->
+        <div class="review px-5">
             <div class="row d-flex">
-                <div class="profile-pic"><img src="https://i.imgur.com/Mcd6HIg.jpg" width="60px" height="60px"></div>
                 <div class="d-flex flex-column pl-3">
                     <h4>Emily</h4>
-                    <p class="grey-text">30 min ago</p>
+                    <p class="grey-text">3 stars</p>
                 </div>
             </div>
             <div class="row pb-3">
-                <p>This dive center is incredibly well organized and is at the top of its game.</p>
+                <p>It’s a great experience. The ambiance is very welcoming and charming. Amazing wines, food and
+                    service. Staff are extremely knowledgeable and make great recommendations.</p>
             </div>
         </div>
-
+        <div class="review px-5">
+            <div class="row d-flex">
+                <div class="d-flex flex-column pl-3">
+                    <h4>Andy</h4>
+                    <p class="grey-text">5 stars</p>
+                </div>
+            </div>
+            <div class="row pb-3">
+                <p>This place is great! Atmosphere is chill and cool but the staff is also really friendly. They know
+                    what they’re doing and what they’re talking about, and you can tell making the customers happy is
+                    their main priority. Food is pretty good, some italian classics and some twists, and for their
+                    prices it’s 100% worth it.</p>
+            </div>
+        </div>
+        <div class="review px-5">
+            <div class="row d-flex">
+                <div class="d-flex flex-column pl-3">
+                    <h4>David</h4>
+                    <p class="grey-text">4 stars</p>
+                </div>
+            </div>
+            <div class="row pb-3">
+                <p>This cozy restaurant has left the best impressions! Hospitable hosts, delicious dishes, beautiful
+                    presentation, wide wine list and wonderful dessert. I recommend to everyone! I would like to come
+                    back here again and again.</p>
+            </div>
+        </div>
     </div>
 </div>
 
+<!--Footer-->
 <div class="container">
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
         <div class="col-md-4 d-flex align-items-center">
@@ -99,6 +143,5 @@
 </div>
 
 
-<script src="./js/bootstrap.bundle.js"></script>
 </body>
 </html>

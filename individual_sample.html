@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="viewport" content = "width = device-width, initial-scale = 2.3, user-scalable = no" />
-    <meta name="viewport" content = "width = device-width, initial-scale = 2.3, minimum-scale = 1, maximum-scale = 5" />
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="viewport" content="width = device-width, initial-scale = 2.3, user-scalable = no"/>
+    <meta name="viewport" content="width = device-width, initial-scale = 2.3, minimum-scale = 1, maximum-scale = 5"/>
     <link href="./css/bootstrap.min.css" rel="stylesheet">
     <link href="./css/fontawesome.css" rel="stylesheet">
     <link href="./css/main.css" rel="stylesheet">
@@ -60,11 +60,15 @@
     <div class="container">
         <section class="py-5">
             <div class="container px-4 px-lg-5 my-5">
-                <div class="row gx-4 gx-lg-5 align-items-center">
-                    <div class="col-md-6"><img class="card-img-top"
-                                               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8yMIHkxs901EzRfpvMq6gIEfDADZcfbJxLw&usqp=CAU"
-                                               alt="..."/></div>
-                    <div class="col-md-6">
+                <div class="row align-items-center">
+                    <div class="col-md-4">
+                        <picture class="sample-image">
+                            <source media="(min-width: 800px)" srcset="static/r1-high.jpeg">
+                            <source media="(min-width: 450px)" srcset="static/r1.jpeg">
+                            <img class="img-fluid img-thumbnail" src="static/r1.jpeg" alt="sample restaurant image">
+                        </picture>
+                    </div>
+                    <div class="col-md-8">
                         <h1 class="display-5 fw-bolder">The Island Grill</h1>
                         <!--                        Display the aggregate rating for the restaurant here-->
                         <div class="fs-5 mb-5">
@@ -99,9 +103,12 @@
                 <!--                Display the map here, for now use a placeholder-->
                 <!--                Insert place microdata here, since we are mocking the map by an image, we also mock the microdata here-->
                 <div class="row my-5" itemscope itemtype="https://schema.org/Place">
-                    <img src="https://lh6.ggpht.com/tIJO-z4W_09faOPdfFkD0qHfeo5l2SU-F7Y7LjAUd97mPgy-mJg8lEs3YtfMvlXKuMA=h900"
+                    <video width="320" height="240" controls>
+                        <source src="static/sample.mp4" type="video/mp4">
+                    </video>
+                    <img src="static/map.jpeg"
                          class="img-fluid">
-                    <!--                    I am not sure what's the best way to illustrate this since we are using mocked img as map, but here is an example illustrating how to use the Place microdata-->
+                    <!--                    I am not sure what's the best way to illustrate this since we are using mocked static as map, but here is an example illustrating how to use the Place microdata-->
                     <span itemprop="streetAddress">316 Yonge Street</span><br>
                     <span itemprop="addressLocality">Toronto</span>, <span itemprop="addressRegion">Ontario</span> <span
                         itemprop="postalCode">L3S 1A1</span>

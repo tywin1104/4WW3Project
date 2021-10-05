@@ -3,10 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content = "width = device-width, initial-scale = 2.3, user-scalable = no" />
+    <meta name="viewport" content = "width = device-width, initial-scale = 2.3, minimum-scale = 1, maximum-scale = 5" />
     <link href="./css/bootstrap.min.css" rel="stylesheet">
     <link href="./css/fontawesome.css" rel="stylesheet">
     <link href="./css/main.css" rel="stylesheet">
-    <title>Where Go Eat</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <title>The Island Grill</title>
+    <!--    Facebook Open Graph Protocol metadata-->
+    <meta property="og:title" content="The Island Grill"/>
+    <meta property="og:url" content="http://44.198.227.245/individual_sample.html"/>
+    <meta property="og:image"
+          content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8yMIHkxs901EzRfpvMq6gIEfDADZcfbJxLw&usqp=CAU"/>
+    <!--    Twitter cards metadata-->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@whereGoEat">
+    <meta name="twitter:creator" content="@Tianyi">
+    <meta name="twitter:title" content="The Island Grill">
+    <meta name="twitter:description"
+          content="At Island Grill, our mission is simple: enhance and educate the palate with the freshest ingredients and flavors, while surprising and exciting each guest with personal care and service">
+    <meta name="twitter:image"
+          content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8yMIHkxs901EzRfpvMq6gIEfDADZcfbJxLw&usqp=CAU">
 </head>
 <body>
 <!--Navigation bar for the website-->
@@ -77,35 +97,42 @@
                     </div>
                 </div>
                 <!--                Display the map here, for now use a placeholder-->
-                <div class="row my-5">
+                <!--                Insert place microdata here, since we are mocking the map by an image, we also mock the microdata here-->
+                <div class="row my-5" itemscope itemtype="https://schema.org/Place">
                     <img src="https://lh6.ggpht.com/tIJO-z4W_09faOPdfFkD0qHfeo5l2SU-F7Y7LjAUd97mPgy-mJg8lEs3YtfMvlXKuMA=h900"
                          class="img-fluid">
+                    <!--                    I am not sure what's the best way to illustrate this since we are using mocked img as map, but here is an example illustrating how to use the Place microdata-->
+                    <span itemprop="streetAddress">316 Yonge Street</span><br>
+                    <span itemprop="addressLocality">Toronto</span>, <span itemprop="addressRegion">Ontario</span> <span
+                        itemprop="postalCode">L3S 1A1</span>
                 </div>
             </div>
         </section>
 
         <!--        A list of comments/ reviews for the current restaurant-->
-        <div class="review px-5">
+        <div class="review px-5" itemprop="review" itemscope itemtype="https://schema.org/Review">
             <div class="row d-flex">
                 <div class="d-flex flex-column pl-3">
-                    <h4>Emily</h4>
-                    <p class="grey-text">3 stars</p>
+                    <h4 itemprop="author">Emily</h4>
+                    <p class="grey-text"><span itemprop="reviewRating">3</span> stars</p>
                 </div>
             </div>
             <div class="row pb-3">
-                <p>It’s a great experience. The ambiance is very welcoming and charming. Amazing wines, food and
+                <p itemprop="reviewBody">It’s a great experience. The ambiance is very welcoming and charming. Amazing
+                    wines, food and
                     service. Staff are extremely knowledgeable and make great recommendations.</p>
             </div>
         </div>
         <div class="review px-5">
             <div class="row d-flex">
                 <div class="d-flex flex-column pl-3">
-                    <h4>Andy</h4>
-                    <p class="grey-text">5 stars</p>
+                    <h4 itemprop="author">Andy</h4>
+                    <p class="grey-text"><span itemprop="reviewRating">5</span> stars</p>
                 </div>
             </div>
             <div class="row pb-3">
-                <p>This place is great! Atmosphere is chill and cool but the staff is also really friendly. They know
+                <p itemprop="reviewBody">This place is great! Atmosphere is chill and cool but the staff is also really
+                    friendly. They know
                     what they’re doing and what they’re talking about, and you can tell making the customers happy is
                     their main priority. Food is pretty good, some italian classics and some twists, and for their
                     prices it’s 100% worth it.</p>
@@ -114,12 +141,13 @@
         <div class="review px-5">
             <div class="row d-flex">
                 <div class="d-flex flex-column pl-3">
-                    <h4>David</h4>
-                    <p class="grey-text">4 stars</p>
+                    <h4 itemprop="author">David</h4>
+                    <p class="grey-text"><span itemprop="reviewRating">4</span> stars</p>
                 </div>
             </div>
             <div class="row pb-3">
-                <p>This cozy restaurant has left the best impressions! Hospitable hosts, delicious dishes, beautiful
+                <p itemprop="reviewBody">This cozy restaurant has left the best impressions! Hospitable hosts, delicious
+                    dishes, beautiful
                     presentation, wide wine list and wonderful dessert. I recommend to everyone! I would like to come
                     back here again and again.</p>
             </div>

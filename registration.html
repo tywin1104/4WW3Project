@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="viewport" content = "width = device-width, initial-scale = 2.3, user-scalable = no" />
-    <meta name="viewport" content = "width = device-width, initial-scale = 2.3, minimum-scale = 1, maximum-scale = 5" />
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="viewport" content="width = device-width, initial-scale = 2.3, user-scalable = no"/>
+    <meta name="viewport" content="width = device-width, initial-scale = 2.3, minimum-scale = 1, maximum-scale = 5"/>
     <link href="./css/bootstrap.min.css" rel="stylesheet">
     <link href="./css/fontawesome.css" rel="stylesheet">
     <link href="./css/main.css" rel="stylesheet">
@@ -43,28 +43,29 @@
     <div class="container">
         <h1 class="display-5 fw-bold">New User Sign Up</h1>
         <p class="col-md-8 fs-4">First time using the service? Register as a new user here!</p>
-        <form>
+        <form name="registrationForm" onsubmit="return validateForm()">
             <!--            Here we define a couple fields to be entered when registering a new user on the site-->
             <div class="mb-3">
                 <label for="registerFieldUsername" class="form-label">Username</label>
-                <input type="text" class="form-control" id="registerFieldUsername"
+                <input type="text" class="form-control" name="username" id="registerFieldUsername"
                        aria-describedby="searchFieldNameHelp">
             </div>
             <div class="mb-3">
                 <label for="registerFieldPassword" class="form-label">Password</label>
-                <input type="password" class="form-control" id="registerFieldPassword"
+                <input type="password" class="form-control" name="password" id="registerFieldPassword"
                        aria-describedby="searchFieldNameHelp">
             </div>
             <div class="mb-3">
                 <label for="registerFieldEmail" class="form-label">Email Address</label>
-                <input type="email" class="form-control" id="registerFieldEmail" aria-describedby="searchFieldNameHelp">
+                <input type="email" class="form-control" name="email" id="registerFieldEmail" aria-describedby="searchFieldNameHelp">
             </div>
             <div class="mb-3">
-                <input class="registerFieldCheckbox" type="checkbox" value="" id="flexCheckDefault">
+                <input class="registerFieldCheckbox" id="checkbox" type="checkbox" value="" id="flexCheckDefault">
                 <label class="form-check-label" for="flexCheckDefault">
                     I've read and agree the terms & conditions of Where Go Eat
                 </label>
             </div>
+            <!-- Javascript form validation-->
             <button type="submit" class="btn btn-primary btn-lg">Register</button>
         </form>
     </div>
@@ -84,6 +85,6 @@
     </footer>
 </div>
 
-
+<script src="js/registration.js"></script>
 </body>
 </html>

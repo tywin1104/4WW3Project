@@ -11,3 +11,9 @@ body {
 .grey-text {
     color: #BDBDBD
 }
+
+/* google map */
+.map {
+    height: 60vh;
+    margin-top: 3%;
+}

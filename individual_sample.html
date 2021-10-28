@@ -100,19 +100,8 @@
                         </form>
                     </div>
                 </div>
-                <!--                Display the map here, for now use a placeholder-->
-                <!--                Insert place microdata here, since we are mocking the map by an image, we also mock the microdata here-->
-                <div class="row my-5" itemscope itemtype="https://schema.org/Place">
-                    <video width="320" height="240" controls>
-                        <source src="static/sample.mp4" type="video/mp4">
-                    </video>
-                    <img src="static/map.jpeg"
-                         class="img-fluid">
-                    <!--                    I am not sure what's the best way to illustrate this since we are using mocked static as map, but here is an example illustrating how to use the Place microdata-->
-                    <span itemprop="streetAddress">316 Yonge Street</span><br>
-                    <span itemprop="addressLocality">Toronto</span>, <span itemprop="addressRegion">Ontario</span> <span
-                        itemprop="postalCode">L3S 1A1</span>
-                </div>
+                <!--    div for google map embedded-->
+                <div id="individualMap" class="map"></div>
             </div>
         </section>
 
@@ -177,6 +166,23 @@
     </footer>
 </div>
 
+<script>
+    function initMap() {
+        // using google map API to embed markers for the current restaurant in the map
+        const map = new google.maps.Map(document.getElementById("individualMap"), {
+            zoom: 10,
+            // Toronto as the center
+            center: {lat: 43.651070, lng: -79.347015},
+        })
+        new google.maps.Marker({
+            position: {lat: 43.651070, lng: -79.347015},
+            map,
+        });
+    }
+</script>
+<script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5AeFd4NIdLRRmz4uSraziqEq_Sr1XUXg&callback=initMap">
+</script>
 
 </body>
 </html>

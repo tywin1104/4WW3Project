@@ -6,7 +6,7 @@ Group name: WhereToEat
 
 Member1: Tianyi Zhang zhangt73 400112525
 
-Link: http://44.198.227.245/
+Link: https://4ww3.tywinzhang.com/
 
 Github Repository Link: https://github.com/tywin1104/4WW3Project
 

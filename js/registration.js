@@ -11,10 +11,10 @@ function validateForm() {
     }else if(password.length < 8) {
         alert("Password must set to be at least 8 characters in length");
         return false;
-    }else if(! validateEmail(email)) {
+    }else if(email !== "" && ! validateEmail(email)) {
         alert("Must enter an valid email address");
         return false;
-    }else if(checked === false) {
+    }else if(email !== "" && checked === false) {
         alert("Must agree the terms & conditions in order to register");
         return false;
     }

@@ -53,9 +53,8 @@ if (isset($_POST["name"])) {
         'region' => 'us-east-1',
         'version' => 'latest',
         'credentials' => [
-                //TODO: use as env var
-            'key' => 'AKIAV64CCC5FUEAG5VG7',
-            'secret' => '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',
+            'key' => '',
+            'secret' => '',
         ]
     ]);
 

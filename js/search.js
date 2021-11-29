@@ -7,8 +7,9 @@ function getLocation() {
     }
 }
 
-//For now (Assignment 2), output the user's current location. In future (Assignment 3), this should issue a db query for backend
+// Post location data to search form via AJAX so that PHP side can process them as normal
 function searchByLocation(position) {
-    alert("Search by Latitude: " + position.coords.latitude +
-        " Longitude: " + position.coords.longitude);
+    document.getElementById("searchFieldUserLocationLat").value = position.coords.latitude;
+    document.getElementById("searchFieldUserLocationLong").value = position.coords.longitude;
+    document.getElementById('searchForm').submit();
 }

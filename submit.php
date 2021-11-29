@@ -53,8 +53,8 @@ if (isset($_POST["name"])) {
         'region' => 'us-east-1',
         'version' => 'latest',
         'credentials' => [
-            'key' => '',
-            'secret' => '',
+            'key' => getenv("AWS_KEY"),
+            'secret' => getenv("AWS_SECRET"),
         ]
     ]);
 
